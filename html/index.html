@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Press+Start+2P&family=Sriracha&display=swap"
+        rel="stylesheet">
+    <title>Club Penguin</title>
+</head>
+
+<body>
+    <h2 class="edition">Remastered!</h2>
+    <div class="title">
+        <svg version="1.1" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="100%">
+            <text class="stroke-text thick color1" x="50%" y="50%">CLUB</text>
+            <text class="stroke-text" x="50%" y="50%">CLUB</text>
+
+
+        </svg>
+        <svg version="1.1" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" width="100%">
+            <text class="stroke-text thick color1" x="50%" y="50%">PENGUIN</text>
+            <text class="stroke-text color2" x="50%" y="50%">PENGUIN</text>
+        </svg>
+    </div>
+
+    <div class="buttons">
+        <button class="button" id="signup">Create a Penguin</button>
+        <button class="button" id="login">Login</button>
+    </div>
+
+    <div class="modal" id="signupmodal">
+        <div class="modal-header">
+            <div class="title">Create a Penguin</div>
+            <span class="xbtn" id="xbtn1">&times;</span>
+        </div>
+        <form class="modalForm" id="modalForm">
+            <label for="colors">Choose a Color:</label>
+            <select name="colors" id="colors">
+                <option value="Blue" id="blue">Blue</option>
+                <option value="Red" id="red">Red</option>
+                <option value="Pink" id="pink">Pink</option>
+                <option value="Purple" id="purple">Purple</option>
+                <option value="Green" id="green">Green</option>
+                <option value="Orange" id="orange">Orange</option>
+            </select>
+            <br>
+            <label for="newUsername">Enter New Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required maxlength="6">
+            <br>
+            <label for="newEmail">Enter Email Address:</label>
+            <input type="email" id="newEmail" name="newEmail" required>
+            <br>
+            <label for="newPwd">Create a Password:</label>
+            <input type="password" id="newPwd" name="newPwd" required>
+            <br>
+            <label for="confirmPwd">Confirm Password:</label>
+            <input type="password" id="confirmPwd" name="confirmPwd" required>
+            <br>
+            <input type="button" class="modalBtns" id="newUser" value="Create Penguin">
+            <img id="penguin" src="../images/penguin.webp" width="150" height="200">
+            <br>
+            <span class="error" id="pwderr">The passwords must match!</span>
+            <span class="error" id="usertaken">Username/Email already exists</span>
+        </form>
+    </div>
+
+    <div class="modal" id="loginmodal">
+        <div class="modal-header">
+            <div class="title">Login</div>
+            <span class="xbtn" id="xbtn2">&times;</span>
+        </div>
+        <form name="loginForm" class="modalForm">
+            <label for="Username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" required>
+            <br>
+            <input type="button" class="modalBtns" id="loginbtn" value="Login">
+            <img id="puffle" src="../images/whitepuffle.webp" width="150" height="150">
+            <br>
+            <span class="error" id="loginerr">Incorrect credentials!</span>
+        </form>
+    </div>
+    <div id="overlay"></div>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
