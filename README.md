@@ -1,4 +1,4 @@
-# Unit 3 Project
+# Club Penguin
 
 Club Penguin was a massively multiplayer online game, dominating the viritual world from 2005 all the way to 2017. Our 
 team has set out on a mission to revive the spirit of Club Penguin with our own take: Club Penguin Remastered. 
@@ -35,9 +35,6 @@ From there you can create a penguin and log in to being game play. Enjoy!
 * Canvas
 * HTML
 * CSS
-
-### User Stories
-To see all user stories, here is our [project board](https://github.cloud.capitalone.com/FBM903/Unit-Project.Unit-3/projects/1).
 
 ### Start Page:
 The start page at index.html allows the user to create an account and login into any existing accounts. 
@@ -77,17 +74,12 @@ For the backend of this application, we implemented a MongoDB database and queri
 ### Issues:
 One issue that we faced on the backend having the email and username fields be unique across the entire collection since we did not want users to be able to sign up with duplicate information. We initially looked into having it setup within the mongosh shell and it had worked, however, upon further inspection, this method would require users to run `createIndex()` in their own mongosh shell which we thought would not be user friendly. To overcome this issue, we looked into using the `syncIndexes()` function that mongoose has to offer which would ensure that the indexes within the MongoDB collection match with the indexes defined in our model's schema. This allowed for us to set the `unique` keyword to true and the database would show error if any duplicate emails or usernames were attempting to be posted. 
 
-### ERD:
-[ERD] (https://github.cloud.capitalone.com/FBM903/Unit-Project.Unit-3/blob/ReadMeTN/frontend/images/clubPenguinERD(final).png)
 
 ## Bugs
 Bugs that are currently known
 * Refreshing the page during game play will occasionally reload at the wrong story segment and break the inventory functionality if the player has gotten inventory since logging in. 
 * Once game has ended, inventory will not reset if you begin a new game.
 
-### Solutions we attempted
-
-To solve these issues we tried to use local storage to caputure the inventory, but this did not help refreshing because there would be times the inventory would clear. Due to also implementing the use of async functions when refreshing there would be uncertainty in successful inventory load due to the possibility of the functions not yet completing. We also attempted to clear local storage when restarting the game but it proved to be unsuccessful.
 
 ## Credits
 NPC and Background Sprites: [Club Penguin Rewritten wiki](https://clubpenguinrewritten.fandom.com/wiki/Club_Penguin_Rewritten_Wiki)
