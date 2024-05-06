@@ -1,0 +1,195 @@
+body {
+    background: #069;
+    background: radial-gradient(circle, #09c 20%, #006699 100%);
+}
+
+h2 {
+    margin-top: 5px;
+    margin-left: 70px;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+}
+
+.edition {
+    transform: rotate(-10deg);
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 1.0;
+        color: white;
+    }
+
+    50% {
+        opacity: 0.5;
+        color: black;
+    }
+
+    100% {
+        opacity: 1.0;
+        color: white;
+    }
+}
+
+.title {
+    margin-top: 150px;
+    color: #666;
+    text-shadow: 0px 3px 0px rgba(0, 0, 0, .5);
+}
+
+.stroke-text {
+    font-family: 'Black Han Sans', sans-serif, 'Times New Roman', Times, serif;
+    font-size: 90px;
+    text-align: center;
+    text-anchor: middle;
+    stroke: black;
+    stroke-width: 4px;
+    fill: white;
+
+
+}
+
+.thick {
+    stroke-width: 15px;
+}
+
+.color1 {
+    stroke: #006699;
+}
+
+.color2 {
+    fill: #ffcc00;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: 'Sriracha', cursive;
+    font-size: large;
+    padding: 2em;
+    background-color: #09c;
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+    color: white;
+    box-shadow:
+        inset 0 0 2px 0 rgba(255, 255, 255, .4),
+        inset 0 0 3px 0 rgba(0, 0, 0, .4),
+        inset 0 0 3px 5px rgba(0, 0, 0, .05),
+        inset 0 0 10px 2px #006699,
+        inset 0 0 15px 0 white,
+        2px 2px 4px 0 rgba(0, 0, 0, .25);
+    border-radius: 12px;
+    border-color: #006699;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translate(0px, 5px);
+}
+
+/* Modals */
+.modal {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #09c;
+    width: 500px;
+    max-width: 80%;
+    font-family: 'Sriracha', cursive;
+    font-size: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -150px;
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+
+.modalForm {
+    padding: 2em;
+}
+
+.modalBtns {
+    text-align: center;
+    padding: 14px 16px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Sriracha', cursive;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.modalBtns:hover {
+    color: #09c;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.xbtn {
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.xbtn:hover {
+    color: white;
+}
+
+#penguin {
+    float: right;
+    padding: 4px;
+    position: relative;
+}
+
+#puffle {
+    float: right;
+    margin-bottom: 20px;
+}
+
+.error {
+    position: absolute;
+    display: none;
+    color: darkred;
+    font-size: 18px;
+}

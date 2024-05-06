@@ -1,0 +1,45 @@
+body {
+    background: #069;
+    background: radial-gradient(circle, #09c 20%, #006699 100%);
+}
+
+.btn {
+    font-family: 'Sriracha', cursive;
+}
+
+img {
+    width: 10vh;
+    height: 5vh;
+}
+
+nav {
+    height: 8%;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    aspect-ratio: 79 / 50;
+    width: 100%;
+    height: 100%;
+}
+
+#cWrap {
+    width: 100%;
+    height: 63.29vw;
+    /* height/width ratio */
+    max-height: 92%;
+    max-width: 158vh;
+    /* width/height ratio */
+    margin: auto;
+}
+
+body {
+    padding-bottom: 1px;
+}
